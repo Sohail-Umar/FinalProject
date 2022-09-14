@@ -7,6 +7,7 @@ import Contactus from "./Components/ContactUs"
 import Login from './Components/Login';
 import SignUp from './Components/SignUp';
 import Products from './Components/Products'
+import Footer from './Components/Footer';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
       </Routes>
+      {/* <Footer /> */}
     </>
   );
 }

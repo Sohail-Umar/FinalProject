@@ -1,0 +1,35 @@
+/* Footer styling starts */
+/* Footer general adjustment */
+footer {
+  background-color: #15304e;
+  height: 300px;
+  width: 100%;
+}
+
+/* footer menu adjustment starts */
+.footer-menu ul {
+  text-align: center;
+}
+.footer-menu li {
+  margin-top: 20px;
+  display: inline-block;
+}
+.footer-menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 25px;
+}
+
+/* footer social icons styling */
+.footer-social-icons ul {
+  text-align: center;
+}
+.footer-social-icons li {
+  display: inline-block;
+}
+.footer-social-icons img {
+  width: 40px;
+  margin-left: 20px;
+}
+/* Footer totally end */
