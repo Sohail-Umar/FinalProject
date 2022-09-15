@@ -43,8 +43,8 @@ function Home() {
 
     return (
         <>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-                <Carousel width={600} showThumbs={false} autoPlay={true} interval={4500} infiniteLoop={true}>
+            <div className="slider">
+                <Carousel height={800} showThumbs={false} autoPlay={true} interval={4500} infiniteLoop={true}>
                     <div>
                         <img className="slider-img" src=".././background.jpg" />
                         {/* <p className="legend">Legend 1</p> */}
@@ -61,12 +61,12 @@ function Home() {
             </div>
 
             {/* <img className="background-img" src=".././background.jpg" /> */}
-            <h2>Furniture that Everyone Loves</h2>
+            <h2 style={{ textAlign: "center" }}>Furniture that Everyone Loves</h2>
             <button>Buy Now</button>
             <button>Explore</button>
 
             <div className="container">
-                {products.productData.map((value) => {
+                {products.productData.slice(2, 8).map((value) => {
                     return (
                         <div className="container">
                             <div className="block-container">
@@ -74,10 +74,10 @@ function Home() {
                                     src={"http://localhost:3001/images/" + value.image}
                                     className="product-images"
                                 />
-                                <th className='data-props duration-color'>{value.productname}</th>
-                                <tr className='data-props duration-color'>{value.category}</tr>
-                                <tr className='data-props duration-color'>{value.description}</tr>
-                                <tr className='data-props duration-color'>{value.price}</tr>
+                                <p className='data-props duration-color'><span className="span-headings">Product name: </span>{value.productname}</p>
+                                <p className='data-props duration-color'><span className="span-headings"> Category: </span>{value.category}</p>
+                                <p className='data-props duration-color'><span className="span-headings">Description: </span>{value.description}</p>
+                                <p className='data-props duration-color'><span className="span-headings">Price: </span>{value.price}</p>
                                 <button>Buy</button>
                             </div>
                         </div>

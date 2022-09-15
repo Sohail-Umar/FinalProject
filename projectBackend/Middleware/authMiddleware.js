@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken")
 const multer = require('multer')
+require("dotenv").config()
 
 const checkValidData = (req, res, next) => {
 

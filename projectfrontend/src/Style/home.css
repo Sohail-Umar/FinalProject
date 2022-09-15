@@ -10,12 +10,12 @@
 } */
 
 .slider-img {
-  height: 400px;
+  height: 600px;
 }
 
 .product-images {
-  height: 50px;
-  width: 100px;
+  height: 150px;
+  width: 100%;
 }
 
 .container {
@@ -23,6 +23,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin: 10px;
+  /* background: #000; */
   justify-content: center;
 }
 
@@ -32,7 +33,7 @@
   border: 1px solid;
   padding: 10px;
   box-shadow: 5px 10px 8px #888888;
-  width: 300px;
+  width: 250px;
   margin: 40px;
 }
 
@@ -49,4 +50,13 @@
 .duration-color {
   color: grey;
   font-size: 20px;
+}
+
+.slider {
+  background: #000;
+}
+
+.span-headings {
+  font-weight: bold;
+  color: #000;
 }

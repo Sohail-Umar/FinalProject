@@ -24,6 +24,7 @@ const userSignUpController = async (req, res) => {
 
 const userSignInController = async (req, res) => {
 
+    const { password } = req.body
     try {
         // console.log(req.body)
         if (!req.body.email) {
@@ -40,24 +41,26 @@ const userSignInController = async (req, res) => {
             return
         }
 
-        if (req.body.password !== user.password) {
-            res.status(401).json({ message: "Password Doesn't Match" })
-            return
-        }
+        // if (req.body.password !== user.password) {
+        //     res.status(401).json({ message: "Password Doesn't Match" })
+        //     return
+        // }
 
+        const token = jwt.sign({
+            email: user.email
+        },
+            process.env.JWT_SECRET, { expiresIn: 300 }
+        )
+        const validatePassword = bcrypt.compareSync(password, user.password);
+
+        res.status(200).json({ message: "Successfully SignIn", token, validatePassword })
+        return
     } catch (error) {
         res.status(401).json(error)
         return
     }
 
-    const token = jwt.sign({
-        fullname: user.fullname,
-        email: user.email
-    },
-        process.env.JWT_SECRET, { expiresIn: 300 }
-    )
 
-    res.status(200).json({ message: "Successfully SignIn", token })
 }
 
 

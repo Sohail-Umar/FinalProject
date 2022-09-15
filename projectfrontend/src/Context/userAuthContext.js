@@ -8,13 +8,13 @@ function UserProvider({ children }) {
     const [isAuthenticated, setisAuthenticated] = React.useState(false);
 
     const handleUserAuthChange = (isAuthenticated) => {
-        setisAuthenticated(true)
+        setisAuthenticated(isAuthenticated)
     }
 
     return (
 
-        <CreateUserStateContext.Provider value={userData}>
-            <CreateUserDispatchContext.Provider value={{ handleUserDataChange }}>
+        <CreateUserStateContext.Provider value={isAuthenticated}>
+            <CreateUserDispatchContext.Provider value={{ handleUserAuthChange }}>
                 {children}
             </CreateUserDispatchContext.Provider>
         </CreateUserStateContext.Provider>
@@ -46,4 +46,7 @@ const useUserContext = () => {
 }
 
 
-export { UserProvider, useCreateUserStateContext, useCreateUserDispatchContext, useUserContext };
+export {
+    UserProvider, useCreateUserStateContext,
+    useCreateUserDispatchContext, useUserContext
+};

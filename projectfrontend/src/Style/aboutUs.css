@@ -32,6 +32,7 @@ p {
   padding: 50px;
   margin-bottom: 80px;
   margin-top: 50px;
+  width: 50%;
 }
 
 .pink-left h1 {
@@ -48,6 +49,62 @@ p {
 
 .pink-right {
   background-color: #eed1d2;
-  height: 500px;
+  height: 600px;
   margin-top: 50px;
+  width: 50%;
+  justify-content: center;
+}
+
+.pink-right h1 {
+  margin-left: 28px;
+  margin-top: 150px;
+}
+
+.pink-right p {
+  text-align: justify;
+  margin-top: 30px;
+}
+
+/* .pink-parent {
+  background: #000;
+} */
+
+.row1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.row2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.row3 {
+  display: flex;
+  flex-direction: row;
+}
+
+.ourmindset {
+  text-align: center;
+  justify-content: center;
+}
+
+/* .ourmindset-p {
+  width: 80%;
+  text-align: center;
+  justify-content: center;
+} */
+
+.wholetext-p-ourmindset {
+  /* background: #f2e7e9; */
+  text-align: center;
+  justify-content: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.wholetext-p-ourmindset p {
+  text-align: center;
+  justify-content: center;
+  font-size: 20px;
 }

@@ -1,0 +1,31 @@
+.box-signup {
+  display: flex;
+  margin-top: 100px;
+  flex-direction: column;
+  margin-left: 450px;
+  background-color: #15304e;
+  width: 350px;
+  border-radius: 15px;
+  height: 350px;
+}
+
+.box-signup:hover {
+  box-shadow: 5px 10px 18px #888888;
+  transform: scale(1.2);
+  margin-bottom: 50px;
+  transition: all 0.8s;
+}
+
+.userSignup-inputs {
+  width: 300px;
+  margin-bottom: 20px;
+  border: none;
+  margin-left: 20px;
+  height: 30px;
+}
+
+.userSignup-label {
+  margin-left: 21px;
+  margin-top: 15px;
+  color: white;
+}

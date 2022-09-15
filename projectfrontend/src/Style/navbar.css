@@ -2,6 +2,14 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  background-color: white;
+  top: 0;
+  position: sticky;
+  /* width: 100%; */
+}
+
+.navbar h3 {
+  margin-left: 20px;
 }
 
 .navbar-links {
@@ -10,6 +18,10 @@
   justify-content: space-between;
   margin-left: auto;
   margin-right: 20px;
+}
+
+.li-navbar {
+  text-decoration: none;
 }
 
 p {
