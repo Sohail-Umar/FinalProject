@@ -9,7 +9,7 @@ import "../Style/adminlogin.css"
 function AdminSignin() {
     const navigate = useNavigate();
 
-    const { handleAdminAuthChange } = useCreateAdminStateContext()
+    const { handleAdminAuthChange } = useCreateAdminDispatchContext()
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
 
