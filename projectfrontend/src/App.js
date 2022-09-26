@@ -12,12 +12,27 @@ import AdminDashboard from './Components/AdminDashboard';
 import SigninAdminProtectedRoute from './ProtectedRoutes/SigninAdminProtectedRoute';
 import Admin from './Components/Admin';
 import AdminSignin from './Components/AdminSignin'
+import NavbarLogin from './Components/NavbarLogin'
+import { useCreateUserDispatchContext } from "./Context/userAuthContext";
+
 
 
 function App() {
+  // const { handleUserAuthChange } = useCreateUserDispatchContext()
+  // const isLoggedin = () => {
+  //   if (handleUserAuthChange !== true) {
+  //     return < NavBar />
+  //   }
+  //   return <NavbarLogin />
+
+  // }
+
   return (
     <>
-      <NavBar />
+      {/* {
+        isLoggedin()
+      } */}
+      < NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<Products />} />

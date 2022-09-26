@@ -1,15 +1,17 @@
 import React from "react";
 import "../Style/navbar.css"
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLinkClickHandler, useLocation } from "react-router-dom"
 
 
 function NavBar() {
+
+
+
     const { pathName } = useLocation()
-    const showNavbar = pathName === "/" || pathName === "/products"
-        || pathName === "/about" || pathName === "/contactus" ? false : true
+    const showSigninNavbar = pathName === "/login" || pathName === "/signup" ? false : true
     return (
         <>
-            {showNavbar && (
+            {showSigninNavbar && (
                 <div className="navbar">
                     <h3>Fundo</h3>
                     <div className="navbar-links">
@@ -26,12 +28,8 @@ function NavBar() {
                         <p>
                             <Link to="/contactus" className="li-navbar"> Contact Us</Link>
                         </p>
-                        <p>
-                            <Link to="/login" className="li-navbar">Login</Link>
-                        </p>
-                        <p>
-                            <Link to="/signup" className="li-navbar">Sign Up</Link>
-                        </p>
+
+
                     </div>
                 </div>
             )}
